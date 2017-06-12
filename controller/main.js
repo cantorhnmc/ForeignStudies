@@ -33,9 +33,17 @@ app.controller.main = new function() {
 	};
 	
 	me.onContinueInit = function() {
+		
+		jQuery(app.view.toolbar.toolbar).find("#addButton").click(me.onAddButtonClick);
+		
 		app.view.foreignStudiesGrid.create();
 		
 	    
+	}; 
+	
+	me.onAddButtonClick = function() {
+		
+		app.view.search.search.show(); 
 	}; 
 	
 

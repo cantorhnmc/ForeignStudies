@@ -21,21 +21,7 @@ Content-type: text/html
 <script type="text/javascript" src="/userdocs/JSON/json3.min.js"></script>
 <script type="text/javascript">
     jQuery.noConflict();
-</script>
-<link rel="stylesheet" href="/userdocs/hnmcHeader/version2/header.css">
-<script type="text/javascript" src="/userdocs/hnmcHeader/version2/header.js"></script>
-
-<link rel="stylesheet" href="/userDocs/cgihtml/ARGFGEX/view/toolbar.css">
-
-<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/model.js"></script>
-<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/foreignStudies.js"></script>
-
-<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/toolbar.js"></script>
-<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/foreignStudiesGrid.js"></script>
-
-<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/controller/main.js"></script>
-
-<script type="text/javascript">
+   
 
    //Create string trim if not already there
    if (!String.prototype.trim) {
@@ -66,8 +52,25 @@ Content-type: text/html
         }
         
     }; 
-   
-    
+ 
+</script>
+<link rel="stylesheet" href="/userdocs/hnmcHeader/version2/header.css">
+<script type="text/javascript" src="/userdocs/hnmcHeader/version2/header.js"></script>
+
+<link rel="stylesheet" href="/userDocs/cgihtml/ARGFGEX/view/toolbar.css">
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/model.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/foreignStudies.js"></script>
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/toolbar.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/foreignStudiesGrid.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/search/search.js"></script>
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/controller/search/search.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/controller/main.js"></script>
+
+
+<script type="text/javascript">   
 jQuery(function() {
    app.header.create({
                         hasLogoutLink : true,
