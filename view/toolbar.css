@@ -1,0 +1,41 @@
+	.mainToolBar {
+		height : 60px;
+		position : relative;
+		background-color : #E0E0E0; 
+		padding-left : 10px;
+	}
+
+    .mainToolBar label {
+		margin-left: 5px;
+		margin-right : 5px;
+	}
+
+    .mainToolBar span {
+		font-weight : bold; 
+	}
+
+	.mainToolSelections {
+		margin: 1px;
+		position: absolute;
+		transform: translate(0, -50%);
+		width : 98%;
+	}	
+	
+	#mainToolBarLine1 {
+		top: 20px;
+		
+	}
+	
+	#mainToolBarLine2 {
+		top: 40px;
+		
+	}
+	
+   .mainToolSelections > div.toolBarInfo {
+   	float : left;
+   	width : calc(95% / 4);
+   }
+   .mainToolSelections > div.toolBarItems {
+   	float : right;
+   	width : 5%;
+   }

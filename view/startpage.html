@@ -1,0 +1,87 @@
+<AS400>main
+Content-type: text/html  
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<script type="text/javascript" src="/userdocs/js_number_padding.js"></script>
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.4.0/jsgrid.min.css" />
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.4.0/jsgrid-theme.min.css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.4.0/jsgrid.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.73/jsrender.min.js"></script>
+
+<script type="text/javascript" src="/userdocs/JSON/json3.min.js"></script>
+<script type="text/javascript">
+    jQuery.noConflict();
+</script>
+<link rel="stylesheet" href="/userdocs/hnmcHeader/version2/header.css">
+<script type="text/javascript" src="/userdocs/hnmcHeader/version2/header.js"></script>
+
+<link rel="stylesheet" href="/userDocs/cgihtml/ARGFGEX/view/toolbar.css">
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/model.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/model/foreignStudies.js"></script>
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/toolbar.js"></script>
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/view/foreignStudiesGrid.js"></script>
+
+<script type="text/javascript" src="/userDocs/cgihtml/ARGFGEX/controller/main.js"></script>
+
+<script type="text/javascript">
+
+   //Create string trim if not already there
+   if (!String.prototype.trim) {
+     String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+    };
+   }
+   servervars = { 
+        htmlRoot : '/userDocs/cgihtml/ARGFGEX/', 
+        pgm  : '/cgibinp/ARGFGEX.pgm',
+        cgicds : '/%cgicds%/',
+        userid : '/%userid%/',
+        username : '/%username%/',
+        mucd : '/%mucd%/',
+        physNbr : '/%physNbr%/',
+        headerTitle : '/%PGMTITLE%/',
+        id : '/%id%/',
+        cgicdsObj : '/%JSON_CGICDS%/',
+        patient : {
+            ssn : '/%patssn%/',
+            ssnf : '/%patssnf%/',
+            firstName : '/%svfnme%/',
+            lastName : '/%svlnme%/',
+            fullName : '/%patname%/',
+            dob : '/%patdob%/',
+            medicalRecord : '/%patmrn%/',
+            sex : '/%sex%/' 
+        }
+        
+    }; 
+   
+    
+jQuery(function() {
+   app.header.create({
+                        hasLogoutLink : true,
+                        hasMenuLink : true
+                       });
+                       
+                       
+   
+    app.controller.main.init();
+});
+
+   
+</script>   
+
+</head>
+<body></body>
+</html>

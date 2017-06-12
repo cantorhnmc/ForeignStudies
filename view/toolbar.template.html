@@ -1,0 +1,28 @@
+
+<div class="mainToolBar">
+    <div id="mainToolBarLine1" class="mainToolSelections">
+	    <div id="patientName" class="toolBarInfo">
+	    	<label>Patient:</label>
+	    	<span>{{:~root.patient.fullName}}</span>
+	    </div>
+	    <div id="patientDob" class="toolBarInfo">
+			<label>DOB:</label>
+			<span>{{:~root.patient.dob}}</span>
+	    </div>
+	    <div id="patientGender" class="toolBarInfo">
+	    	<label>Gender:</label>
+			<span>{{:~root.patient.sex}}</span>
+	    </div>
+	    <div id="MR#:" class="toolBarInfo">
+            <label>MR#:</label>
+            <span>{{:~root.patient.medicalRecord}}</span>
+        </div>
+	    <div class="toolBarItems">
+	        <button>Add</button>
+	    </div>
+	</div>
+	<div id="mainToolBarLine2" class="mainToolSelections">
+	    <input  type="checkbox"><span>Active Only</span>
+	
+	</div>
+</div>
