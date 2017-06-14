@@ -63,6 +63,11 @@ app.model.model = function(opts) {
 	 */
 
 	me.loadData = function(opts) {
+		
+		   if (typeof opts.clear === 'boolean' && opts.clear) {
+		   	me.clear(); 
+		   	return []; 
+		   }
 		   me.loadDataParms = opts;
 		   var handler = null;
 		   if (me.returnDataWithPromise) {
@@ -92,6 +97,10 @@ app.model.model = function(opts) {
 
      };
 
+   me.clear = function() {
+   	 me.data = {};
+   	 me.deferred = null;
+   }; 
 	 me = jQuery.extend(me, opts);
 
 };

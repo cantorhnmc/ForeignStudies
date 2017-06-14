@@ -38,19 +38,54 @@ app.view.search.search = new function() {
 	  var formHtml = me.template.render();
 	  me.form = jQuery(formHtml).appendTo('body');	
 	  me.dialog = jQuery("#mainSearchDiv").dialog({
-	     	        width : 550,
+	     	        width : 400,
+	     	        height : 400,
 	     	        draggable: true,
 	     	        create: function( event, ui ) {
+	     	        	
+	     	        	 me.grid = jQuery("#searchGrid").jsGrid({
+				                                         sorting : false,
+				                                         paging : false,
+				                                         width : "100%", 
+				                                         height : 300,
+				                                         controller : app.model.search.search,
+				                                         autoload : false,
+				                                         noDataContent  : '',
+
+				                                         fields : [
+			                                                       {
+				                                                     title : "Search Results",
+				                                                     name : "DESCRIPTION",
+				                                                     type : "text"
+			                                                       }
+			                                                      ],
+			                                         onRefreshed : function(args) {
+				
+				                                     
+			                                         },
+			                                         rowDoubleClick : app.controller.search.search.onRowDoubleClick
+			                                           
+		                                         });	
 	     	        	app.controller.search.search.init(me.form);
 
 	     	        }
 	    });
+	    
+	    
 	   	
 		
 	}; 	
 	
+  me.refreshGrid = function() {
+  	 jQuery("#searchGrid").jsGrid("refresh"); 
+  }; 
 	
-	
+  me.clear = function() {
+  	if (me.grid) {
+  		app.model.search.search.clear(); 
+  		jQuery(me.grid).jsGrid("refresh");
+  	}
+  }; 	
 	
 }; 
 	

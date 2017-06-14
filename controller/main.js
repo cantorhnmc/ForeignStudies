@@ -23,6 +23,7 @@ app.controller.main = new function() {
 	
 	me.init = function() {
 		app.model.foreignStudies = app.model.ForeignStudies(); 
+		app.model.search.search = new app.model.search.Search(); 
 		app.view.toolbar.create({
 			                     callback : me.onContinueInit,
 			                     context : me 
